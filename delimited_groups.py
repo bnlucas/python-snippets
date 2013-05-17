@@ -6,19 +6,19 @@
 # If n is omitted, this will create one group of all values.
 
 def delimited_groups(data, n=10, copy=False):
-    groups = []
+	groups = []
 
-    if copy:
-        list_ = list(data)
-    else:
-        list_ = data
-    n = len(list_) if n == 0 else n
+	if copy:
+		list_ = list(data)
+	else:
+		list_ = data
+	n = len(list_) if n == 0 else n
 
-    if len(list_) < n:
-        groups.append(','.join(list_))
-    else:
-        while len(list_) > 0:
-            groups.append(','.join(list_[:n]))
-            del list_[:n]
+	if len(list_) < n:
+		groups.append(','.join(list_))
+	else:
+		while len(list_) > 0:
+			groups.append(','.join(list_[:n]))
+			del list_[:n]
 
-    return groups
+	return groups
