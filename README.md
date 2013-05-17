@@ -10,7 +10,7 @@ class caller(_service):
 	def add_tags(self, tags):
 		parameters = []
 		tag_groups = delimited_groups(tags, 10)
-		for i in tag_groups:
+		for i in range(len(tag_groups)):
 			parameters.append({'tags': tag_group[i]})
 		return self.multi_request('post', 'image.add_tags', parameters)
 ```
