@@ -20,6 +20,8 @@ class objectify:
 			raise Exception('There is no data[\'{key}\'].'.format(key=key))
 			
 	def __getitem__(self, key):
+		if isinstance(key, int):
+			return self.data[key]
 		if key in self.data:
 			return self.data[key]
 		else:
