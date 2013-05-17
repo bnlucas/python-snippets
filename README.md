@@ -1,5 +1,5 @@
 Func: delimited_groups(list data [, int n, bool copy])
-======================================================
+------------------------------------------------------
 
 This was made in answer to an API service only allowing a maximum of 10 items to
 be passed in a comma-delimited string.
@@ -18,8 +18,8 @@ class caller(_service):
 This will generate groups of 10 comma-delimited tags to be sent to the service.
 the .multi_request() creates requests for all parameters[n]
 
-Class: Objectify
-================
+Class: objectify(mixed data [, string node])
+--------------------------------------------
 
 When I am working with JSON objects and I know the structure of them, I find the
 current `dict` way a little more time consuming than say if it were an object.
@@ -55,7 +55,7 @@ exam_one	= objectify(results, 'exam_one') # only get exam_one node.
 # print exam_one['student_a']['a']
 ```
 
-Both new and old methods `object.node.node` and object['node']['node'] work so
+Both new and old methods `object.node.node` and `object['node']['node']` work so
 this can be added into any script that uses `json`
 
 This also works with regular `dict` objects as well.
