@@ -24,7 +24,10 @@ class objectify:
 			return self.data[key]
 		else:
 			raise Exception('There is no data[\'{key}\'].'.format(key=key))
-			
+	
+	def __len__(self):
+		return len(self.data)
+
 	def __repr__(self):
 		return '%r' % (self.__dict__['data'])
 		
