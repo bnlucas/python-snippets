@@ -21,7 +21,7 @@ class objectify:
 			
 	def __getitem__(self, key):
 		if isinstance(key, int):
-			return self.data[key]
+			return objectify(self.data[key])
 		if key in self.data:
 			return self.data[key]
 		else:
