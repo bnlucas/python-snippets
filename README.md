@@ -13,7 +13,7 @@ class caller(_service):
 		for i in tag_groups:
 			parameters.append({'tags': tag_group[i]})
 		return self.multi_request('post', 'image.add_tags', parameters)
-```python
+```
 
 This will generate groups of 10 comma-delimited tags to be sent to the service.
 the .multi_request() creates requests for all parameters[n]
